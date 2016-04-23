@@ -1,0 +1,59 @@
+<!-- last update 21 April 2016 -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Rover Controller Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Edision Robot Controller</h1>
+    </header>
+    <section>
+        <div>
+            <img name="image" onLoad="jsUpdate()">
+        </div>
+        <form action="/controlit" method="post">
+            <table style="width:60%" "Height:50%">
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="button" value="Foward" class="button button3"></input>
+                        <td></td>
+                        <td>
+                            <input type="button" value="Fast" class="button button3"></input>
+                        </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="Left" class="button button3"></input>
+                    </td>
+                    <td>
+                        <input type="button" value="Back" class="button button3"></input>
+                    </td>
+                    <td>
+                        <input type="button" value="Right" class="button button3"></input>
+                        <td>
+                            <input type="button" value="Slow" class="button button3"></input>
+                        </td>
+                </tr>
+            </table>
+        </form>
+        <form action="/hello" method="GET">
+        </form>
+    </section>
+    <aside>
+        <!-- Display flashed messages -->
+        {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+        <div style="color:#FF0000">
+            {{ message }}
+        </div>
+        {% endfor %} {% endif %} {% endwith %}
+    </aside>
+    <footer>Intel® IoT Roadshow Amsterdam, April 23-24, 2016
+    </footer </body>
+
+</html>
