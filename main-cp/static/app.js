@@ -12,6 +12,7 @@
 
         jsUpdate();
 
+        //buttons to work
         $('input[type="button"]').each(function() {
             $(this).click(function(event) {
                 $.post(urlToPost, {
@@ -20,5 +21,19 @@
                     console.log('post sent');
                 })
             });
+        });
+
+        //keyboard to work
+        $(document).keypress(function(event) {
+            var code = event.which || event.keyCode;
+            if (code == 37) { //left
+                $('input[value="Left"]').trigger('click');
+            } else if (code == 38) { //up
+                $('input[value="Foward"]').trigger('click');
+            } else if (code == 39) { //right
+                $('input[value="Right"]').trigger('click');
+            } else if (code == 40) { //down
+                $('input[value="Back"]').trigger('click');
+            }
         });
     });
