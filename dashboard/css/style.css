@@ -9125,3 +9125,9 @@ body.skin-3 {
 .temp_detail {
     font-weight: 700;
 }
+
+.bot-title {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
