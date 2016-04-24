@@ -1,11 +1,14 @@
 {
-  "name": "LocalTemperature",
+  "name": "FireBrigadeBot",
   "description": "",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "main": "main.js",
   "engines": {
     "node": ">=0.10.0"
   },
   "dependencies": {
+    "q": "latest",
+      "mraa":"0.10.1",
+      "pubnub": "latest"
   }
 }
